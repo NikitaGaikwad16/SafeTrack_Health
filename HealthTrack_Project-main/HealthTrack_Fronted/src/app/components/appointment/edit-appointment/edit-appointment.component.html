@@ -1,0 +1,49 @@
+<app-appointment-menu></app-appointment-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Appointment</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h2 class="text-center mb-4">Update Appointment</h2>
+      <form (ngSubmit)="updateAppointment()">
+        <!-- Appointment ID -->
+        <div class="mb-3">
+          <input type="number" class="form-control" placeholder="Appointment ID" [(ngModel)]="appointment.appointment_id" name="appointment_id" >
+        </div>
+  
+        <!-- Appointment Date -->
+        <div class="mb-3">
+          <input type="date" class="form-control" placeholder="Appointment Date" [(ngModel)]="appointment.appointment_date" name="appointment_date">
+        </div>
+  
+        <!-- Status -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Status" [(ngModel)]="appointment.status" name="status">
+        </div>
+  
+        <!-- Patient ID -->
+        <div class="mb-3">
+          <input type="number" class="form-control" placeholder="Patient ID" [(ngModel)]="appointment.patient.patient_id" name="patient_id">
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </body>
+  </html>
+  
+</body>
+</html>

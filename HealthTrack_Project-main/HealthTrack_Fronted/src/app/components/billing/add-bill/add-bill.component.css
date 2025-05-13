@@ -1,0 +1,26 @@
+/* Form Styling */
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  border-radius: 15px;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+input[type="number"], input[type="text"], input[type="date"] {
+  border-radius: 10px;
+}
+
+button {
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}

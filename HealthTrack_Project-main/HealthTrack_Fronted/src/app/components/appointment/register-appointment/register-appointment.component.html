@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <app-appointment-menu></app-appointment-menu>
+  <div class="container py-5">
+    <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: #fff; border-radius: 15px;">
+      <h2 class="text-center mb-4">Register Appointment</h2>
+      <form (ngSubmit)="onSubmit()">
+
+        <!-- Appointment Date -->
+        <div class="mb-3">
+          <input type="date" class="form-control" [(ngModel)]="appointment.appointment_date" name="appointment_date" required>
+        </div>
+
+        <!-- Status -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Status" [(ngModel)]="appointment.status" name="status" required>
+        </div>
+
+        <!-- Patient ID -->
+        <div class="mb-3">
+          <input type="number" class="form-control" placeholder="Patient ID" [(ngModel)]="appointment.patient.patient_id" name="patient_id" required>
+        </div>
+
+        <!-- Submit and Clear Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-light px-4 py-2 me-2 fw-bold" style="color: #007bff; border-radius: 20px;">Register Appointment</button>
+          <button type="button" (click)="clearForm()" class="btn btn-outline-light px-4 py-2 fw-bold" style="border-radius: 20px;">Clear</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

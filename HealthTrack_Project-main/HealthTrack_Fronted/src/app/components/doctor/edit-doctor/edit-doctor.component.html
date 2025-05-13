@@ -1,0 +1,43 @@
+<app-doctor-menu></app-doctor-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Update Doctor</h2>
+    <form (ngSubmit)="updateDoctor(doctor)">
+      <div class="mb-3">
+        <input type="number" class="form-control" placeholder="Doctor Name" [(ngModel)]="doctor.doctor_id" name="doctor_nid">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Doctor Name" [(ngModel)]="doctor.doctor_name" name="doctor_name">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Specialty" [(ngModel)]="doctor.specialty" name="specialty">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Contact Number" [(ngModel)]="doctor.contactNumber" name="contactNumber">
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+  
+    </form>
+  </div>
+
+</body>
+</html>
+
+</body>
+</html>

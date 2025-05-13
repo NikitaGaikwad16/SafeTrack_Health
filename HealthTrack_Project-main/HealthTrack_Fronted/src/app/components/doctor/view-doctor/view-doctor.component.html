@@ -1,0 +1,50 @@
+<app-doctor-menu></app-doctor-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: #fff; border-radius: 15px;">
+      <h2 class="text-center mb-4">View Doctor by ID</h2>
+
+      <!-- Doctor ID Input -->
+      <div class="mb-3">
+        <input type="number" class="form-control" placeholder="Enter Doctor ID" [(ngModel)]="doctorId" />
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-light px-4 py-2 me-2 fw-bold" (click)="getDoctor()" style="color: #007bff; border-radius: 20px;">
+          Search Doctor
+        </button>
+      </div>
+
+      <!-- Doctor Details -->
+      <div *ngIf="doctor" class="mt-4">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Doctor Name</th>
+              <th>Specialty</th>
+              <th>Contact Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ doctor.doctor_id }}</td>
+              <td>{{ doctor.doctor_name }}</td>
+              <td>{{ doctor.specialty }}</td>
+              <td>{{ doctor.contactNumber }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

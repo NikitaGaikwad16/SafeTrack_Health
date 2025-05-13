@@ -1,0 +1,83 @@
+/* Card Styling */
+.card {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading Styling */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Input Field Styling */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  outline: none;
+}
+
+/* Button Styling */
+.btn-light {
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-light:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #007bff;
+  transform: translateY(-3px);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-light,
+  .btn-outline-light {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

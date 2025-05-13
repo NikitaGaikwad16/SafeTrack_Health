@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <app-billing-menu></app-billing-menu>
+  <div class="container py-5">
+    <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: #fff; border-radius: 15px;">
+      <h2 class="text-center mb-4">View Billing by ID</h2>
+  
+      <!-- Billing ID Input -->
+      <div class="mb-3">
+        <input type="number" class="form-control" placeholder="Enter Billing ID" [(ngModel)]="BillingId" />
+      </div>
+  
+      <div class="text-center">
+        <button class="btn btn-light px-4 py-2 me-2 fw-bold" (click)="getBillingById()" style="color: #007bff; border-radius: 20px;">
+          Search Billing
+        </button>
+      </div>
+  
+      <!-- Billing Details -->
+      <div *ngIf="billing" class="mt-4">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Patient ID</th>
+              <th>Total Amount</th>
+              <th>Payment Status</th>
+              <th>Billing Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ billing.id }}</td>
+              <td>{{ billing.patient.patient_id }}</td>
+              <td>{{ billing.totalAmount }}</td>
+              <td>{{ billing.paymentStatus }}</td>
+              <td>{{ billing.billingDate }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

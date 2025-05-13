@@ -1,0 +1,72 @@
+/* Hero Section */
+.hero-section {
+  background: url('src\assets\images\hospital.jpg') no-repeat center center;
+  background-size: cover; /* ✅ Image ko full cover karne ke liye */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* ✅ Dark overlay for better text visibility */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease;
+}
+
+/* Button Hover Effect */
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  color: #007bff;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

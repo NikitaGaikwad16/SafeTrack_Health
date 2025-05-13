@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Edit User</h2>
+    <form (ngSubmit)="updateUser()">
+
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="user.username" name="username">
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="user.firstname" name="firstname">
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="user.lastname" name="lastname">
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Email" [(ngModel)]="user.email" name="email" />
+      </div>
+
+
+
+      <div class="mb-3"  placeholder="Role" >
+        <select class="form-control" [(ngModel)]="user.role" name="role">
+          <option value="ADMIN">Admin</option>
+          <option value="DOCTOR">Doctor</option>
+          <option value="PATIENT">Patient</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

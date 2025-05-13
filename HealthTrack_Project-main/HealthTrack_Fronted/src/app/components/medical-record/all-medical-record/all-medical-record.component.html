@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="text-center">All Medical Records</h2>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Diagnosis</th>
+        <th>Prescription</th>
+        <th>Treatment</th>
+        <th>Date of Record</th>
+        <th>Patient ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of medicalRecords">
+        <td>{{ record.record_id }}</td>
+        <td>{{ record.diagnosis }}</td>
+        <td>{{ record.prescription }}</td>
+        <td>{{ record.treatment }}</td>
+        <td>{{ record.date_of_record }}</td>
+        <td>{{ record.patient.patient_id }}</td>
+        <td>
+          <!-- ✅ Edit Button -->
+          <a class="btn btn-success me-2" routerLink="/edit-medicalrecord">Edit</a>
+
+          <!-- ✅ Delete Button -->
+          <button class="btn btn-danger" (click)="deleteMedicalRecord(record.record_id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

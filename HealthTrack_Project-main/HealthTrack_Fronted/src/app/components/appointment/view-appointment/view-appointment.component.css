@@ -1,0 +1,38 @@
+/* Container Styling */
+.container {
+  margin-top: 30px;
+}
+
+/* Table Styling */
+.table {
+  background-color: #f8f9fa;
+  color: #343a40;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Heading Styling */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Button Styling */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}

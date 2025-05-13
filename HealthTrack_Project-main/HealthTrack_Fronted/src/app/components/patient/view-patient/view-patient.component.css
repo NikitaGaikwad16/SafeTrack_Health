@@ -1,0 +1,44 @@
+/* Card Styling */
+.card {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Button Styling */
+button {
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0,123,255,0.5);
+}
+
+/* Table Styling */
+.table {
+  margin-top: 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}

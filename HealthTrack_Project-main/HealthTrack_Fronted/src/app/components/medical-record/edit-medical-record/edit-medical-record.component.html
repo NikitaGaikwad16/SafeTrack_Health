@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <div class="container py-5">
+    <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: #fff; border-radius: 15px;">
+      <h2 class="text-center mb-4">Add Medical Record</h2>
+      <form (ngSubmit)="onSubmit(record)">
+
+        <!-- ✅ Record ID -->
+        <div class="mb-3">
+          <input type="number" class="form-control" placeholder="Record ID" [(ngModel)]="record.record_id" name="record_id" required />
+        </div>
+
+        <!-- ✅ Diagnosis -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Diagnosis" [(ngModel)]="record.diagnosis" name="diagnosis" required />
+        </div>
+
+        <!-- ✅ Prescription -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Prescription" [(ngModel)]="record.prescription" name="prescription" required />
+        </div>
+
+        <!-- ✅ Treatment -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Treatment" [(ngModel)]="record.treatment" name="treatment" required />
+        </div>
+
+        <!-- ✅ Date of Record -->
+        <div class="mb-3">
+          <input type="date" class="form-control" [(ngModel)]="record.date_of_record" name="date_of_record" required />
+        </div>
+
+        <!-- ✅ Patient ID -->
+        <div class="mb-3">
+          <input type="number" class="form-control" placeholder="Patient ID" [(ngModel)]="record.patient.patient_id" name="patient_id" required />
+        </div>
+
+        <!-- ✅ Buttons -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-light px-4 py-2 me-2 fw-bold" style="color: #007bff; border-radius: 20px;">Add Record</button>
+          </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,57 @@
+<app-appointment-menu></app-appointment-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Appointments</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">All Appointments</h2>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Appointment Date</th>
+            <th>Status</th>
+            <th>Patient ID</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let appointment of appointments">
+            <td>{{ appointment.appointment_id }}</td>
+            <td>{{ appointment.appointment_date }}</td>
+            <td>{{ appointment.status }}</td>
+            <td>{{ appointment.patient?.patient_id }}</td>
+            <td>
+              <!-- ✅ Edit Button -->
+              <!-- <button class="btn btn-success me-2" (click)="editAppointment(appointment)">
+                Edit
+              </button> -->
+              <a class="btn btn-success me-2" routerLink="/edit-appointment">Edit</a>
+
+              <!-- ✅ Delete Button -->
+              <button class="btn btn-danger" (click)="deleteAppointment(appointment.appointment_id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  </html>
+
+</body>
+</html>

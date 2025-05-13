@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <app-patient-menu></app-patient-menu>
+
+<div class="container">
+  <h2 class="text-center">All Patients</h2>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Patient Name</th>
+        <th>Address</th>
+        <th>Contact Number</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{ patient.patient_id }}</td>
+        <td>{{ patient.patient_name }}</td>
+        <td>{{ patient.address }}</td>
+        <td>{{ patient.contactNumber }}</td>
+        <td>
+          <!-- ✅ Update Button -->
+          <a class="btn btn-success me-2" routerLink="/edit-patient">
+            Update
+          </a>
+
+          <!-- ✅ Delete Button -->
+          <button class="btn btn-danger" (click)="deletePatient(patient.patient_id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

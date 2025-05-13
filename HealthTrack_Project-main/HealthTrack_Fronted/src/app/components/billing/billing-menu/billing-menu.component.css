@@ -1,0 +1,22 @@
+/* Navbar Styling */
+.billing-menu {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f39c12 !important;
+}

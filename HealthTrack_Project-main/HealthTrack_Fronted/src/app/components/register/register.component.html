@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container py-5">
+    <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: #fff; border-radius: 15px;">
+      <h2 class="text-center mb-4">Register User</h2>
+
+      <form (ngSubmit)="onSubmit()" >
+
+         <!-- First Name -->
+         <div class="mb-3">
+          <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="user.firstname" name="firstname" required>
+        </div>
+
+         <!-- Last Name -->
+         <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="user.lastname" name="lastname" required>
+        </div>
+
+         <!-- Email -->
+         <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" name="email" required>
+        </div>
+
+        <!-- Username -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Username" [(ngModel)]="user.username" name="username" required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" name="password" required>
+        </div>
+
+
+        <!-- Role -->
+        <div class="mb-3">
+          <select class="form-control" [(ngModel)]="user.role" name="role" required>
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="doctor">Doctor</option>
+            <option value="patient">Patient</option>
+          </select>
+        </div>
+
+        <!-- Register Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-light px-4 py-2 fw-bold" style="color: #007bff; border-radius: 20px;">
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

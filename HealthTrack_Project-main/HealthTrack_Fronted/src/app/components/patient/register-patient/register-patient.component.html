@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: #fff; border-radius: 15px;">
+      <h2 class="text-center mb-4">Register Patient</h2>
+      <form (ngSubmit)="onSubmit()">
+
+        <!-- Patient Name -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Patient Name" [(ngModel)]="patient.patient_name" name="patient_name" required>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Address" [(ngModel)]="patient.address" name="address" >
+        </div>
+
+        <!-- Contact Number -->
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Contact Number" [(ngModel)]="patient.contactNumber"  name="contactNumber" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-light px-4 py-2 me-2 fw-bold" style="color: #007bff; border-radius: 20px;">Register Patient</button>
+          <button type="button" (click)="clearForm()" class="btn btn-outline-light px-4 py-2 fw-bold" style="border-radius: 20px;">Clear</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <app-billing-menu></app-billing-menu>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Bills</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h2 class="text-center mb-4">All Bills</h2>
+
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Patient ID</th>
+            <th>Total Amount</th>
+            <th>Payment Status</th>
+            <th>Billing Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bill of bills">
+            <td>{{ bill.id }}</td>
+            <td>{{ bill.patient.patient_id }}</td>
+            <td>{{ bill.totalAmount }}</td>
+            <td>{{ bill.paymentStatus }}</td>
+            <td>{{ bill.billingDate }}</td>
+            <td>
+              <!-- ✅ Edit Button -->
+              <a class="btn btn-success me-2" routerLink='/edit-bill'>Edit</a>
+
+              <!-- ✅ Delete Button -->
+              <button class="btn btn-danger" (click)="deleteBill(bill.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  </html>
+
+</body>
+</html>

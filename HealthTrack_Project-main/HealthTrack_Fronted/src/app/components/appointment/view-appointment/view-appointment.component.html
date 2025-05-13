@@ -1,0 +1,51 @@
+<app-appointment-menu></app-appointment-menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: #fff; border-radius: 15px;">
+      <h2 class="text-center mb-4">View Appointment</h2>
+
+      <!-- ✅ Appointment ID Input -->
+      <div class="mb-3">
+        <input type="number" class="form-control" placeholder="Enter Appointment ID" [(ngModel)]="appointmentId" required>
+      </div>
+
+      <!-- ✅ Button to Fetch Appointment -->
+      <div class="text-center">
+        <button class="btn btn-light px-4 py-2 fw-bold" style="color: #007bff; border-radius: 20px;" (click)="getAppointment()">Get Appointment</button>
+      </div>
+
+      <!-- ✅ Display Appointment Data -->
+      <div *ngIf="appointment" class="mt-4">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Appointment Date</th>
+              <th>Status</th>
+              <th>Patient ID</th>
+              <th>Patient Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ appointment.appointment_id }}</td>
+              <td>{{ appointment.appointment_date }}</td>
+              <td>{{ appointment.status }}</td>
+              <td>{{ appointment.patient?.patient_id }}</td>
+              <td>{{ appointment.patient?.patient_name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

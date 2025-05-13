@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">View Medical Record</h2>
+    
+    <!-- Medical Record ID Input -->
+    <div class="mb-3">
+      <input type="number" class="form-control" placeholder="Enter Record ID" [(ngModel)]="recordId" />
+    </div>
+    
+    <div class="text-center">
+      <button class="btn btn-primary" (click)="getMedicalRecord()">Search Record</button>
+    </div>
+  
+    <!-- Medical Record Details -->
+    <div *ngIf="medicalRecord" class="mt-4">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Diagnosis</th>
+            <th>Prescription</th>
+            <th>Treatment</th>
+            <th>Date of Record</th>
+            <th>Patient ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ medicalRecord.record_id }}</td>
+            <td>{{ medicalRecord.diagnosis }}</td>
+            <td>{{ medicalRecord.prescription }}</td>
+            <td>{{ medicalRecord.treatment }}</td>
+            <td>{{ medicalRecord.date_of_record }}</td>
+            <td>{{ medicalRecord.patient.patient_id }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</body>
+</html>
